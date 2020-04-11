@@ -4,5 +4,5 @@
 
 [![Build Status](https://travis-ci.org/Tatoxer/python-project-lvl1.svg?branch=master)](https://travis-ci.org/Tatoxer/python-project-lvl1)
 
-##Gameplay
-<script id="asciicast-X6JlMEhvEs4avSJLwoRLAjKgg" src="https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg.js" async></script>
+## Gameplay 
+[![asciicast](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg.svg)](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg)
