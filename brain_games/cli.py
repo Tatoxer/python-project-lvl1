@@ -1,8 +1,8 @@
-#!/usr/bin/env python3.8
-
+#!/usr/bin/env python3
 import prompt
 
 
 def welcome_user():
     name = prompt.string("May I have your name?\n")
-    print('Hello, ' + name)
+    print('Hello, ' + name + "!\n")
+    return name
