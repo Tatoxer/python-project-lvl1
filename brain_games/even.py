@@ -25,7 +25,8 @@ def rand_numbers():
 
 
 def even():
-    print("Welcome to the Brain Games!\nAnswer 'yes' if number even otherwise answer 'no'")
+    print("Welcome to the Brain Games!")
+    print("Answer 'yes' if number even otherwise answer 'no'")
     name = welcome_user()
     right_answers = 0
 
@@ -42,6 +43,7 @@ def even():
             print("Correct!")
             right_answers += 1
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ")
+            print("'yes' is wrong answer ;(")
+            print("Correct answer was 'no'. Let's try again")
 
     print("Congratulations, " + name.capitalize() + "!")
