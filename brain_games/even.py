@@ -11,19 +11,6 @@ def is_divide_by_2(number):
         return False
 
 
-def rand_numbers():
-    """Generate random number from 0 to 100"""
-    used_numbers = []
-    rand_number = randint(0, 100)
-
-    for i in used_numbers:
-        if i in used_numbers:
-            rand_number = randint(0, 100)
-
-    used_numbers.append(rand_number)
-    return rand_number
-
-
 def even():
     print("Welcome to the Brain Games!")
     print("Answer 'yes' if number even otherwise answer 'no'")
@@ -31,7 +18,7 @@ def even():
     right_answers = 0
 
     while right_answers < 3:
-        rand_number = rand_numbers()
+        rand_number = randint(0, 100)
         if is_divide_by_2(rand_number) is True:
             answer = "yes"
         else:
