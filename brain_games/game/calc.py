@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-from brain_games.game_logic import *
+from brain_games.game_logic import welcome_to_game, welcome_user, rules_of_game
+from brain_games.game_logic import cal_logic_result, user_answer, congrats
 
 
 def calc():

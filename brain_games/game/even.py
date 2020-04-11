@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.game_logic import *
+from brain_games.game_logic import welcome_to_game, welcome_user
+from brain_games.game_logic import rules_of_game, generate_random_number
+from brain_games.game_logic import is_divide_by_2, user_answer, congrats
 
 
 def even():
