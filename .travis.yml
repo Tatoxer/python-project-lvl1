@@ -3,23 +3,12 @@ python:
   # we want to test our package on several versions of Python
   - 3.8.2
 
-env:
-  global:
-    - CC_TEST_REPORTER_ID=c8dd68adc0592ca9919e97351de7d935fb5cb9757a0a666404b317f2eb5aec16
-
 before_install:
   # make depends on poetry
   - pip install poetry
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
 
 install:
   - make install
 
 script:
   - make lint
-  - make test-coverage
-
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
