@@ -4,5 +4,5 @@ import prompt
 
 def welcome_user():
     name = prompt.string("May I have your name?\n")
-    print('Hello, ' + name + "!\n")
+    print('Hello, ' + name.capitalize() + "!\n")
     return name
