@@ -10,6 +10,8 @@ def progression():
     right_answers = 0
 
     while right_answers < 3:
+        if right_answers == -1:
+            break
         progr = game_logic.make_progression()
         answer = choice(progr)
         replaced_progression = game_logic.replace_progression(answer, progr)
@@ -17,4 +19,6 @@ def progression():
         print("Question: " + str(replaced_progression))
         ua = game_logic.user_answer(name)
         right_answers = game_logic.check_answer(ua, answer, right_answers)
-    game_logic.congrats(name)
+
+    if right_answers != -1:
+        game_logic.congrats(name)

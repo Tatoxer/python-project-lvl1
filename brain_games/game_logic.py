@@ -95,6 +95,7 @@ def check_answer(ua, answer, right_answers):
     else:
         print(str(ua) + " is wrong answer ;(")
         print("Correct answer was " + str(answer) + ". Let's try again")
+        right_answers = -1
         return right_answers
 
 
@@ -106,10 +107,12 @@ def check_answer_yes_no(ua, answer, right_answers):
     elif ua != answer and ua == "yes":
         print("'yes' is wrong answer ;(")
         print("Correct answer was 'no'. Let's try again")
+        right_answers = -1
         return right_answers
     else:
         print("'no' is wrong answer ;(")
         print("Correct answer was 'yes'. Let's try again")
+        right_answers = -1
         return right_answers
 
 

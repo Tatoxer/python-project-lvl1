@@ -9,6 +9,9 @@ def gcd():
     right_answers = 0
 
     while right_answers < 3:
+        if right_answers == -1:
+            break
+
         a = game_logic.generate_random_number()
         b = game_logic.generate_random_number()
         print("Question: " + str(a) + " " + str(b))
@@ -17,4 +20,5 @@ def gcd():
         ua = game_logic.user_answer(name)
         right_answers = game_logic.check_answer(ua, answer, right_answers)
 
-    game_logic.congrats(name)
+    if right_answers != -1:
+        game_logic.congrats(name)

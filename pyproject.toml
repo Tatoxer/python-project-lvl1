@@ -1,11 +1,17 @@
 [tool.poetry]
 name = "tatoxer_brain_games"
-version = "0.8.1"
+version = "0.9.0"
 description = ""
 authors = ["Anton Selifanov"]
+maintainers = ["Aleksei Pirogov"]
 packages = [
   { include = "brain_games" },
 ]
+classifiers = [
+	"Topic :: Education"
+	"Topic :: Games/Entertainment"
+]
+repository = "https://github.com/Tatoxer/python-project-lvl1"
 
 [tool.poetry.dependencies]
 python = "^3.8"

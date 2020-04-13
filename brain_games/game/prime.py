@@ -9,10 +9,14 @@ def prime():
     right_answers = 0
 
     while right_answers < 3:
+        if right_answers == -1:
+            break
         number = game_logic.generate_random_number()
         answer = game_logic.is_prime(number)
 
         print("Question: " + str(number))
         ua = game_logic.user_answer_yes_no()
         right_answers = game_logic.check_answer_yes_no(ua, answer, right_answers)
-    game_logic.congrats(name)
+
+    if right_answers != -1:
+        game_logic.congrats(name)
