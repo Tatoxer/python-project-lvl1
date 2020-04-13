@@ -14,7 +14,7 @@ def even():
         rand_number = generate_random_number()
         answer = is_divide_by_2(rand_number)
         print("Question: " + str(rand_number))
-        ua = user_answer_yes_no(name)
+        ua = user_answer_yes_no()
 
         right_answers = check_answer_yes_no(ua, answer, right_answers)
 

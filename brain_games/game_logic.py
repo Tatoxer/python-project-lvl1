@@ -42,14 +42,8 @@ def user_answer(name):
     return answer
 
 
-def user_answer_yes_no(name):
-    while True:
-        answer = input("Your answer: ")
-        if answer.isalpha():
-            break
-        else:
-            print(name.capitalize() + ", you should enter 'yes' or 'no'")
-            continue
+def user_answer_yes_no():
+    answer = input("Your answer: ")
     return answer
 
 
