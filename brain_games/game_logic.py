@@ -111,7 +111,7 @@ def make_progression():
 
 def replace_progression(answer, progr):
     i = 0
-    while i < (len(progr) - 1):
+    while i < len(progr):
         if progr[i] == answer:
             progr[i] = ".."
         i += 1
