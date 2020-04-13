@@ -11,6 +11,7 @@ def prime():
     while right_answers < 3:
         if right_answers == -1:
             break
+
         number = game_logic.generate_random_number()
         right_answer = game_logic.is_prime(number)
 
