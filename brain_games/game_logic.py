@@ -13,7 +13,7 @@ def welcome_user():
     return name
 
 
-def rules_of_game(rules):
+def show_rules(rules):
     print(rules)
 
 
@@ -47,19 +47,19 @@ def user_answer_yes_no():
     return answer
 
 
-def rand_symbol():
+def generate_rand_symbol():
     symbols = ["+", "-", "*"]
     return choice(symbols)
 
 
-def cal_logic_result():
+def do_calc_logic_result():
     number_1 = generate_random_number()
     number_2 = generate_random_number()
 
     if number_1 < number_2:
         number_1, number_2 = number_2, number_1
 
-    symbol = rand_symbol()
+    symbol = generate_rand_symbol()
     answer = ""
     if symbol == "+":
         answer = number_1 + number_2
