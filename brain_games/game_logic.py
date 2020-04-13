@@ -142,3 +142,13 @@ def replace_progression(answer, progr):
             progr[i] = ".."
         i += 1
     return progr
+
+
+def is_prime(number):
+    prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    if number in prime_list:
+        answer = "yes"
+        return answer
+    else:
+        answer = "no"
+        return answer
