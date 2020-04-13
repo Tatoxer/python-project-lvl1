@@ -83,7 +83,7 @@ def remainder_two_numb(a, b):
 
 
 def check_answer(ua, answer, right_answers):
-    if ua == answer:
+    if str(ua) == str(answer):
         print("Correct!")
         right_answers += 1
         return right_answers
@@ -91,3 +91,28 @@ def check_answer(ua, answer, right_answers):
         print(str(ua) + " is wrong answer ;(")
         print("Correct answer was " + str(answer) + ". Let's try again")
         return right_answers
+
+
+def make_progression():
+    progression = []
+    progression_step = randint(1, 10)
+
+    i = 0
+    while i < 11:
+        if i == 0:
+            progression.append(progression_step)
+        else:
+            a = progression[i - 1] + progression_step
+            progression.append(a)
+
+        i += 1
+    return progression
+
+
+def replace_progression(answer, progr):
+    i = 0
+    while i < (len(progr) - 1):
+        if progr[i] == answer:
+            progr[i] = ".."
+        i += 1
+    return progr
