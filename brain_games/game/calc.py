@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.game_logic import welcome_to_game, welcome_user, rules_of_game
-from brain_games.game_logic import cal_logic_result, user_answer, congrats
+from brain_games.game_logic import cal_logic_result, user_answer, congrats, check_answer
 
 
 def calc():
@@ -11,12 +11,7 @@ def calc():
 
     while right_answers < 3:
         answer = cal_logic_result()
-        ua = int(user_answer())
+        ua = int(user_answer(name))
+        right_answers = check_answer(ua, answer, right_answers)
 
-        if ua == answer:
-            print("Correct!")
-            right_answers += 1
-        else:
-            print(str(ua) + " is wrong answer ;(")
-            print("Correct answer was " + str(answer) + ". Let's try again")
     congrats(name)

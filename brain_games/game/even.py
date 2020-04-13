@@ -14,7 +14,7 @@ def even():
         rand_number = generate_random_number()
         answer = is_divide_by_2(rand_number)
         print("Question: " + str(rand_number))
-        ua = user_answer()
+        ua = user_answer(name)
 
         if ua == answer:
             print("Correct!")

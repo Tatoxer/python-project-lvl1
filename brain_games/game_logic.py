@@ -31,8 +31,14 @@ def generate_random_number():
     return randint(0, 100)
 
 
-def user_answer():
-    answer = input("Your answer: ")
+def user_answer(name):
+    while True:
+        answer = input("Your answer: ")
+        if answer.isdigit():
+            break
+        else:
+            print(name.capitalize() + ", you should enter a number")
+            continue
     return answer
 
 
@@ -44,6 +50,10 @@ def rand_symbol():
 def cal_logic_result():
     number_1 = generate_random_number()
     number_2 = generate_random_number()
+
+    if number_1 < number_2:
+        number_1, number_2 = number_2, number_1
+
     symbol = rand_symbol()
     answer = ""
     if symbol == "+":
@@ -59,3 +69,25 @@ def cal_logic_result():
 
 def congrats(name):
     print("Congratulations, " + name.capitalize() + "!")
+
+
+def remainder_two_numb(a, b):
+    if a < b:
+        a, b = b, a
+
+    while b != 0:
+        remainder = a % b
+        a = b
+        b = remainder
+    return str(a)
+
+
+def check_answer(ua, answer, right_answers):
+    if ua == answer:
+        print("Correct!")
+        right_answers += 1
+        return right_answers
+    else:
+        print(str(ua) + " is wrong answer ;(")
+        print("Correct answer was " + str(answer) + ". Let's try again")
+        return right_answers
