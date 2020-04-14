@@ -8,5 +8,7 @@ python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-u
 ```
 [![asciicast](https://asciinema.org/a/e9DKoGCgtG6xFfT5xHQSAVGLs.svg)](https://asciinema.org/a/e9DKoGCgtG6xFfT5xHQSAVGLs)
 
-## Gameplay 
+# Gameplay
+## Brain-calc
+
 [![asciicast](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg.svg)](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg)
