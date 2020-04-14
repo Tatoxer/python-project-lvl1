@@ -9,6 +9,19 @@ python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-u
 [![asciicast](https://asciinema.org/a/e9DKoGCgtG6xFfT5xHQSAVGLs.svg)](https://asciinema.org/a/e9DKoGCgtG6xFfT5xHQSAVGLs)
 
 # Gameplay
-## Brain-calc
+## brain-calc
+[![asciicast](https://asciinema.org/a/ABGTtdxFBOaoPBUPG1QW62vk8.svg)](https://asciinema.org/a/ABGTtdxFBOaoPBUPG1QW62vk8)
 
-[![asciicast](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg.svg)](https://asciinema.org/a/X6JlMEhvEs4avSJLwoRLAjKgg)
+## brain-even
+[![asciicast](https://asciinema.org/a/eqi52xreJqtMy4uHWX3dodjQM.svg)](https://asciinema.org/a/eqi52xreJqtMy4uHWX3dodjQM)
+
+## brain-gcd
+[![asciicast](https://asciinema.org/a/sQXy6o7cXSdqH0fc1f6ZApslf.svg)](https://asciinema.org/a/sQXy6o7cXSdqH0fc1f6ZApslf)
+
+## brain-prime
+[![asciicast](https://asciinema.org/a/peb6hvA0lAAbH24N9j9sJAgx5.svg)](https://asciinema.org/a/peb6hvA0lAAbH24N9j9sJAgx5)
+
+## brain-progression
+[![asciicast](https://asciinema.org/a/01984MlLUX7vBPjUdxJLaAjaK.svg)](https://asciinema.org/a/01984MlLUX7vBPjUdxJLaAjaK)
+
+
