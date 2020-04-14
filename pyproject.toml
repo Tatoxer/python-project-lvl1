@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tatoxer_brain_games"
-version = "0.9.1"
+version = "0.9.2"
 description = ""
 authors = ["Anton Selifanov"]
 maintainers = ["Aleksei Pirogov"]

@@ -1,20 +1,30 @@
 #!/usr/bin/env python3
-from brain_games import game_logic
+from random import randint, choice
 
 
-def calc():
-    game_logic.welcome_to_game()
-    user_name = game_logic.welcome_user()
-    game_logic.show_rules("What is the result of the expression?")
-    right_answers = 0
+rules = "What is the result of the expression?"
 
-    while right_answers < 3:
-        if right_answers == -1:
-            break
 
-        right_answer = game_logic.do_calc_logic_result()
-        user_answer = int(game_logic.user_answer(user_name))
-        right_answers = game_logic.check_answer(user_answer, right_answer, right_answers)
+def logic():
+    number_1 = randint(1, 100)
+    number_2 = randint(1, 100)
+    symbol = generate_rand_symbol()
+    question = f'{number_1} {symbol} {number_2}'
+    right_answer = do_calc_logic_result(number_1, number_2, symbol)
+    return str(question), right_answer
 
-    if right_answers != -1:
-        game_logic.congrats(user_name)
+
+def generate_rand_symbol():
+    symbols = ["+", "-", "*"]
+    return choice(symbols)
+
+
+def do_calc_logic_result(number_1, number_2, symbol):
+    answer = ""
+    if symbol == "+":
+        answer = number_1 + number_2
+    elif symbol == "-":
+        answer = number_1 - number_2
+    elif symbol == "*":
+        answer = number_1 * number_2
+    return str(answer)

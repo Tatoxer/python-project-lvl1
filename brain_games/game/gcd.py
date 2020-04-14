@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
-from brain_games import game_logic
+from random import randint
 
 
-def gcd():
-    game_logic.welcome_to_game()
-    user_name = game_logic.welcome_user()
-    game_logic.show_rules("Find the greatest common divisor of given numbers")
-    right_answers = 0
+rules = "Find the greatest common divisor of given numbers."
 
-    while right_answers < 3:
-        if right_answers == -1:
-            break
 
-        number_1 = game_logic.generate_random_number()
-        number_2 = game_logic.generate_random_number()
-        print("Question: " + str(number_1) + " " + str(number_2))
+def logic():
+    number_1 = randint(1, 100)
+    number_2 = randint(1, 100)
+    question = f'{str(number_1)} {str(number_2)}'
+    right_answer = remainder_two_numb(number_1, number_2)
+    return str(question), right_answer
 
-        right_answer = game_logic.remainder_two_numb(number_1, number_2)
-        user_answer = game_logic.user_answer(user_name)
-        right_answers = game_logic.check_answer(user_answer, right_answer, right_answers)
 
-    if right_answers != -1:
-        game_logic.congrats(user_name)
+def remainder_two_numb(number_1, number_2):
+    if number_1 < number_2:
+        number_1, number_2 = number_2, number_1
+
+    while number_2 != 0:
+        remainder = number_1 % number_2
+        number_1 = number_2
+        number_2 = remainder
+    return str(number_1)
