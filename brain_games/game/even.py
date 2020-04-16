@@ -2,10 +2,10 @@
 from random import randint
 
 
-rules = "Answer 'yes' if number even otherwise answer 'no'"
+description = "Answer 'yes' if number even otherwise answer 'no'"
 
 
-def logic():
+def do_game_logic():
     question = randint(1, 100)
     if question % 2 == 0:
         right_answer = "yes"

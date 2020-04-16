@@ -2,18 +2,18 @@
 from random import randint
 
 
-rules = "Find the greatest common divisor of given numbers."
+description = "Find the greatest common divisor of given numbers."
 
 
-def logic():
+def do_game_logic():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
     question = f'{str(number_1)} {str(number_2)}'
-    right_answer = remainder_two_numb(number_1, number_2)
-    return str(question), right_answer
+    right_answer = get_gcd(number_1, number_2)
+    return str(question), str(right_answer)
 
 
-def remainder_two_numb(number_1, number_2):
+def get_gcd(number_1, number_2):
     if number_1 < number_2:
         number_1, number_2 = number_2, number_1
 
@@ -21,4 +21,4 @@ def remainder_two_numb(number_1, number_2):
         remainder = number_1 % number_2
         number_1 = number_2
         number_2 = remainder
-    return str(number_1)
+    return number_1

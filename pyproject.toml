@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tatoxer_brain_games"
-version = "0.9.4"
+version = "0.9.5"
 description = "Hexlet education project"
 authors = ["Anton Selifanov"]
 maintainers = ["Aleksei Pirogov"]

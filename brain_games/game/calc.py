@@ -2,24 +2,19 @@
 from random import randint, choice
 
 
-rules = "What is the result of the expression?"
+description = "What is the result of the expression?"
 
 
-def logic():
+def do_game_logic():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
-    symbol = generate_rand_symbol()
+    symbol = choice(["+", "-", "*"])
     question = f'{number_1} {symbol} {number_2}'
-    right_answer = do_calc_logic_result(number_1, number_2, symbol)
-    return str(question), right_answer
+    right_answer = calculate(number_1, number_2, symbol)
+    return str(question), str(right_answer)
 
 
-def generate_rand_symbol():
-    symbols = ["+", "-", "*"]
-    return choice(symbols)
-
-
-def do_calc_logic_result(number_1, number_2, symbol):
+def calculate(number_1, number_2, symbol):
     answer = ""
     if symbol == "+":
         answer = number_1 + number_2
@@ -27,4 +22,4 @@ def do_calc_logic_result(number_1, number_2, symbol):
         answer = number_1 - number_2
     elif symbol == "*":
         answer = number_1 * number_2
-    return str(answer)
+    return answer

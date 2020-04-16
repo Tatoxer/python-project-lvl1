@@ -2,21 +2,22 @@
 from random import randint
 
 
-rules = 'Answer "yes" if given number is prime. Otherwise answer "no"'
+description = 'Answer "yes" if given number is prime. Otherwise answer "no"'
 
 
-def logic():
+def do_game_logic():
     question = randint(1, 100)
-    right_answer = is_prime(question)
+    if is_prime(question):
+        right_answer = "yes"
+    else:
+        right_answer = "no"
+
     return str(question), right_answer
 
 
 def is_prime(number):
-    n = number - 1
-    while number % n != 0:
-        n -= 1
-    if n == 1:
-        right_answer = 'yes'
-    else:
-        right_answer = 'no'
-    return right_answer
+    count = number // 2 + 1
+    while number % count != 0:
+        count -= 1
+        if count == 1:
+            return True
