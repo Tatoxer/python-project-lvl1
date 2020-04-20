@@ -2,13 +2,13 @@
 from random import randint
 
 
-description = "Answer 'yes' if number even otherwise answer 'no'"
+DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'"
 
 
-def do_game_logic():
+def generate_game_data():
     question = randint(1, 100)
     if question % 2 == 0:
-        right_answer = "yes"
+        correct_answer = "yes"
     else:
-        right_answer = "no"
-    return str(question), right_answer
+        correct_answer = "no"
+    return str(question), correct_answer

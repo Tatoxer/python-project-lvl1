@@ -2,14 +2,14 @@
 from random import choice, randint
 
 
-description = "What number is missing in the progression?"
+DESCRIPTION = "What number is missing in the progression?"
 
 
-def do_game_logic():
+def generate_game_data():
     progr = make_progression()
-    right_answer = choice(progr)
-    question = replace_progression(right_answer, progr)
-    return str(question), str(right_answer)
+    correct_answer = choice(progr)
+    question = game_question(correct_answer, progr)
+    return str(question), str(correct_answer)
 
 
 def make_progression():
@@ -17,16 +17,18 @@ def make_progression():
     difference = randint(1, 10)
     progression_ = []
     count = 0
-    while count < randint(8, 12):
+    progression_length = randint(8, 12)
+
+    while count < progression_length:
         progression_.append(start + difference * count)
         count += 1
     return progression_
 
 
-def replace_progression(answer, progr):
-    i = 0
-    while i < len(progr):
-        if progr[i] == answer:
-            progr[i] = ".."
-        i += 1
+def game_question(answer, progr):
+    count = 0
+    while count < len(progr):
+        if progr[count] == answer:
+            progr[count] = ".."
+        count += 1
     return progr

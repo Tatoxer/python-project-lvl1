@@ -2,15 +2,15 @@
 from random import randint
 
 
-description = "Find the greatest common divisor of given numbers."
+DESCRIPTION = "Find the greatest common divisor of given numbers."
 
 
-def do_game_logic():
+def generate_game_data():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
     question = f'{str(number_1)} {str(number_2)}'
-    right_answer = get_gcd(number_1, number_2)
-    return str(question), str(right_answer)
+    correct_answer = get_gcd(number_1, number_2)
+    return str(question), str(correct_answer)
 
 
 def get_gcd(number_1, number_2):

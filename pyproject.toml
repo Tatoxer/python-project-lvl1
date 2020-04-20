@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "tatoxer_brain_games"
-version = "0.9.5"
+version = "0.9.6"
 description = "Hexlet education project"
 authors = ["Anton Selifanov"]
-maintainers = ["Aleksei Pirogov"]
+maintainers = ["Sergey Karpuk"]
 repository = "https://github.com/Tatoxer/python-project-lvl1"
 packages = [
   { include = "brain_games" },

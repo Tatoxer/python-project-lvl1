@@ -2,16 +2,16 @@
 from random import randint, choice
 
 
-description = "What is the result of the expression?"
+DESCRIPTION = "What is the result of the expression?"
 
 
-def do_game_logic():
+def generate_game_data():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
-    symbol = choice(["+", "-", "*"])
-    question = f'{number_1} {symbol} {number_2}'
-    right_answer = calculate(number_1, number_2, symbol)
-    return str(question), str(right_answer)
+    operation = choice(["+", "-", "*"])
+    question = f'{number_1} {operation} {number_2}'
+    correct_answer = calculate(number_1, number_2, operation)
+    return str(question), str(correct_answer)
 
 
 def calculate(number_1, number_2, symbol):
