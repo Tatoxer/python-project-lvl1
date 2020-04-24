@@ -16,14 +16,8 @@ def generate_game_data():
 
 
 def is_prime(number):
-    if number == 1:
-        return True
-
     count = 2
     while number % count != 0:
         if count > number // 2:
-            break
-
-        count += 1
-        if count > number // 2:
             return True
+        count += 1
