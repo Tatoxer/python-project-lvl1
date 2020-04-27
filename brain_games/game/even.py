@@ -10,4 +10,4 @@ def generate_game_data():
         correct_answer = "yes"
     else:
         correct_answer = "no"
-    return str(question), correct_answer
+    return str(question), str(correct_answer)

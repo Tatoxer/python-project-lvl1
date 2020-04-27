@@ -11,12 +11,16 @@ def generate_game_data():
     else:
         correct_answer = "no"
 
-    return str(question), correct_answer
+    return str(question), str(correct_answer)
 
 
 def is_prime(number):
+    if number == 1:
+        return False
+
     count = 2
     while number % count != 0:
         if count > number // 2:
             return True
         count += 1
+    return False
